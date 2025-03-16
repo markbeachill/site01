@@ -1,7 +1,7 @@
 baseURL = "https://markbeachill.github.io/site01/"
 languageCode = "en-gb"
 title = "MyStuff"
-theme = "papermod"
+theme = "PaperMod"
 publishDir = "docs"
 
 
