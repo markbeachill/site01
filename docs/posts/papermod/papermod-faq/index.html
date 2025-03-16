@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/site01/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=site01/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>FAQs / How To&#39;s Guide | MyStuff</title>
 <meta name="keywords" content="PaperMod, Docs">
 <meta name="description" content="We&rsquo;ll try to answer frequently asked qestions by users.">
 <meta name="author" content="PaperMod Contributors">
-<link rel="canonical" href="http://localhost:1313/site01/posts/papermod/papermod-faq/">
+<link rel="canonical" href="https://markbeachill.github.io/site01/posts/papermod/papermod-faq/">
 <link crossorigin="anonymous" href="/site01/assets/css/stylesheet.5e2b0720914c2a1865d6a86aeeecaae45ccb472dc61c52cf3461f9573844e0fe.css" integrity="sha256-XisHIJFMKhhl1qhq7uyq5FzLRy3GHFLPNGH5VzhE4P4=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/site01/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/site01/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/site01/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/site01/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/site01/safari-pinned-tab.svg">
+<link rel="icon" href="https://markbeachill.github.io/site01/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://markbeachill.github.io/site01/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://markbeachill.github.io/site01/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://markbeachill.github.io/site01/apple-touch-icon.png">
+<link rel="mask-icon" href="https://markbeachill.github.io/site01/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/site01/posts/papermod/papermod-faq/">
+<link rel="alternate" hreflang="en" href="https://markbeachill.github.io/site01/posts/papermod/papermod-faq/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,7 +55,81 @@
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://markbeachill.github.io/site01/posts/papermod/papermod-faq/">
+  <meta property="og:site_name" content="MyStuff">
+  <meta property="og:title" content="FAQs / How To&#39;s Guide">
+  <meta property="og:description" content="We’ll try to answer frequently asked qestions by users.">
+  <meta property="og:locale" content="en-gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-01-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2021-01-20T00:00:00+00:00">
+    <meta property="article:tag" content="PaperMod">
+    <meta property="article:tag" content="Docs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="FAQs / How To&#39;s Guide">
+<meta name="twitter:description" content="We&rsquo;ll try to answer frequently asked qestions by users.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://markbeachill.github.io/site01/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "PaperMod",
+      "item": "https://markbeachill.github.io/site01/posts/papermod/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "FAQs / How To's Guide",
+      "item": "https://markbeachill.github.io/site01/posts/papermod/papermod-faq/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "FAQs / How To's Guide",
+  "name": "FAQs \/ How To\u0027s Guide",
+  "description": "We\u0026rsquo;ll try to answer frequently asked qestions by users.",
+  "keywords": [
+    "PaperMod", "Docs"
+  ],
+  "articleBody": " We’ll be using yml/yaml format for all examples down below, I recommend using yml over toml as it is easier to read.\nYou can find any YML to TOML converters if necessary.\nOverride theme template By Hugo’s Lookup Order, you can override any part of a theme that you want. The following is a quick example.\nLet’s say you wish the list was different. All you have to do is copy the list template:\nyour-site/themes/papermod/layouts/_defaults/list.html And paste it under your own layouts folder:\nyour-site/layouts/_defaults/list.html Then you’re free to make any changes you want to the list. When Hugo builds your site, your copy of list.html will be used instead of the theme’s list.html.\nEnable Social-Metadata and SEO These include OpenGraph, Twitter Cards and Schema.\n1 2 params: env: production or set HUGO_ENV as “production” in system env-vars\nFailed to find a valid digest in the ‘integrity’ attribute for resource … ? Read about How Subresource Integrity helps: Subresource_Integrity\nWhy was the asset not loading ? : How_browsers_handle_Subresource_Integrity\nSolution:\nSet the following in config.yml\n1 2 3 params: assets: disableFingerprinting: true Linked Issues:\nhttps://stackoverflow.com/questions/65056585/hugo-theme-not-loading https://stackoverflow.com/questions/65040931/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource https://blog.gerardbeckerleg.com/posts/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource/ Bundling Custom css with theme’s assets For adding custom css to be bundled inside one minimized css Create folder in yout project directory as\n.(site root) ├── config.yml ├── content/ ├── theme/hugo-PaperMod/ └── assets/ └── css/ └── extended/ \u003c--- ├── custom_css1.css \u003c--- └── any_name.css \u003c--- All css files inside assets/css/extended will be bundled !\nNote: blank.css is just the placeholder so that it doesn’t break the theme when no files are present under assets/css/extended\nLinked Issues:\nPapermod Theme: How to add custom CSS? Custom Head / Footer Custom css/js can be added by way mentioned below.\n.(site root) ├── config.yml ├── content/ ├── theme/hugo-PaperMod/ └── layouts ├── partials │ ├── comments.html │ ├── extend_footer.html \u003c--- │ └── extend_head.html \u003c--- └── robots.txt Create a html page in directory structure as shown above.\nContents of extend_head.html will be added to head of page.\nand contents of extend_footer.html will be added to bottom of page.\nAdd menu to site You can add menu entries which will appear in the header of every page.\nTo do so, add a menu section to your site’s config.yml:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 menu: main: - identifier: categories name: categories url: /categories/ weight: 10 - identifier: tags name: tags url: /tags/ weight: 20 - identifier: example name: example.org url: https://example.org weight: 30 name controls what will be displayed for the menu entry. url sets the URL that the entry points to. weight is used to control the positioning of entries.\nFor more information on menus, see the Hugo wiki page.\nPin a Post Post can be pinned/ displayed top on the list by adding a weight= var to page-variables\nexample:\n1 2 3 4 5 --- title: \"My Important post\" date: 2020-09-15T11:30:03+00:00 weight: 1 --- 1 2 3 4 5 --- title: \"My 2nd Important post\" date: 2020-09-15T11:30:03+00:00 weight: 2 --- Adding Custom Favicon(s) We support the following paths under /static directory and can be added accordingly.\nfavicon.ico favicon-16x16.png favicon-32x32.png apple-touch-icon.png safari-pinned-tab.svg Favicon(s) can be generated by Favicon.io and can be simply put in /static folder.\nOther way is to add favicon(s) NOT located in /static folder.\nIn site config add the following:\n1 2 3 4 5 6 7 params: assets: favicon: \"\" favicon16x16: \"\" favicon32x32: \"\" apple_touch_icon: \"\" safari_pinned_tab: \"\" Note: absolute url means direct links to external resource: ex. https://web.site/someimage.png\n1 2 3 4 5 6 7 params: assets: favicon: \"/favicon.ico\" favicon16x16: \"/favicon-16x16.png\" favicon32x32: \"/favicon-32x32.png\" apple_touch_icon: \"/apple-touch-icon.png\" safari_pinned_tab: \"/safari-pinned-tab.svg\" Centering image in markdown Add #center after image to center align an image\n1 ![name](path/to/image.png#center) When using figure shortcode\nuse align=center to center image with captions\n1 {{\u003c figure align=center src=\"image.jpg\" \u003e}} Using Hugo’s Syntax highlighter “chroma” Disable Highlight.js in site config.yml\n1 2 3 params: assets: disableHLJS: true Set hugo’s markdown styling in site config.yml\n1 2 3 4 5 6 7 8 markup: highlight: # anchorLineNos: true codeFences: true guessSyntax: true lineNos: true # noClasses: false style: monokai If you want lineNos: true, the background won’t be proper. This will only work with noClasses: false or pygmentsUseClasses: true. Read Generate Syntax Highlighter CSS\nAdd the following to assets/css/extended/custom.css\n1 2 3 .chroma { background-color: unset; } More Info : Configure Markup - Highlight\nSearch not working ? If you are using a CDN to server assets from a different domain, search would break\nWhy? Take a look at fastsearch.js#L35.\nWe fetch the index.json (where the search function looks for the keywords typed) one level up of the website search.min.js is hosted on.\nWe have used this insted of assigning baseURL so as to work with multilingual websites ex. example.com/fr/ and websites being placed under a subdirectory ex. example.com/blog/.\nTo fix for single language websites hosting assets from CDN, this you may override fastsearch.js#L35 and placing appropriate URL as in\n1 xhr.open(\"GET\", \"https://example.com/index.json\"); References Override a Hugo theme ",
+  "wordCount" : "843",
+  "inLanguage": "en",
+  "datePublished": "2021-01-20T00:00:00Z",
+  "dateModified": "2021-01-20T00:00:00Z",
+  "author":[{
+    "@type": "Person",
+    "name": "PaperMod Contributors"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://markbeachill.github.io/site01/posts/papermod/papermod-faq/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyStuff",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://markbeachill.github.io/site01/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -73,7 +147,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/site01/" accesskey="h" title="MyStuff (Alt + H)">MyStuff</a>
+            <a href="https://markbeachill.github.io/site01/" accesskey="h" title="MyStuff (Alt + H)">MyStuff</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -99,22 +173,22 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/site01/" title="Home">
+                <a href="https://markbeachill.github.io/site01/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/site01/pages/" title="Pages">
+                <a href="https://markbeachill.github.io/site01/pages/" title="Pages">
                     <span>Pages</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/site01/general/" title="General">
+                <a href="https://markbeachill.github.io/site01/general/" title="General">
                     <span>General</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/site01/about/" title="About">
+                <a href="https://markbeachill.github.io/site01/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -481,15 +555,15 @@ Read <a href="https://gohugo.io/content-management/syntax-highlighting/#generate
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/site01/tags/papermod/">PaperMod</a></li>
-      <li><a href="http://localhost:1313/site01/tags/docs/">Docs</a></li>
+      <li><a href="https://markbeachill.github.io/site01/tags/papermod/">PaperMod</a></li>
+      <li><a href="https://markbeachill.github.io/site01/tags/docs/">Docs</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/site01/">MyStuff</a></span> · 
+        <span>&copy; 2025 <a href="https://markbeachill.github.io/site01/">MyStuff</a></span> · 
 
     <span>
         Powered by
