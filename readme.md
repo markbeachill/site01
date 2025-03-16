@@ -23,10 +23,18 @@ git add .
 git commit -m "Initial commit"
 
 
+hugo --minify
 
 
 
 git branch -M main
 git push -u origin main
+
+
+git add .
+git commit -m "Fix baseURL for GitHub Pages"
+git push origin main
+
+
 
 

@@ -1,9 +1,12 @@
-baseURL: https://markbeachill.github.io/
+baseURL: "https://markbeachill.github.io/"
 languageCode: en-gb
 title: MyStuff
-theme: papermod
+theme: PaperMod
 #theme: [hugo-PaperMod]
 publishDir: docs
+
+#relativeURLs: true
+#canonifyURLs: true
 
 menu:
   main:
@@ -27,7 +30,7 @@ menu:
 
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-baseURL: "https://adityatelange.github.io/hugo-PaperMod/"
+#baseURL: "https://adityatelange.github.io/hugo-PaperMod/"
 # OLD title: PaperMod
 copyright: "© [PaperMod Contributors](https://github.com/adityatelange/hugo-PaperMod/graphs/contributors)"
 paginate: 5
